@@ -1,0 +1,215 @@
+*{
+    margin: 0;
+    border: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color:  #eeeeee;
+}
+header{
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.932);
+    height: 80px;
+}
+#ContentHeader {
+    width: 90%;
+    margin-left: 5%;
+    display: flex;
+    flex-direction: row;
+}
+#ImgHeader{
+    height: 80px;
+}
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 40px;
+    margin-top: 20px;
+    margin-left: 100px;
+}
+nav a {
+    padding-top: 7px;
+    font-size: 25px;
+    font-weight: 500;
+    margin-right: 20px;
+    color: white;
+}
+nav a:hover{
+    color: rgb(121, 118, 118)
+}
+#TesteGratuito {
+    background-color: white;
+    border-radius: 50px;
+    color: black;
+    text-align: center;
+    width: 180px;
+    font-weight: 600;
+}#TesteGratuito:hover{
+    opacity: 50%;
+}
+@media(max-width: 600px){
+    #ContentHeader {
+        width: 100%;
+    }
+    nav {
+        margin-left: 0px;
+    }
+    nav a {
+        font-size: 12px;
+    }
+    #TesteGratuito {
+        background-color: white;
+        border-radius: 50px;
+        color: black;
+        text-align: center;
+        width: 100px;
+        height: 30px;
+        font-weight: 900;
+        font-size: 18;
+    }
+}
+#Primari {
+    background: linear-gradient(to bottom, #353332da, #eeeeee);
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+}
+#TxtPrimari{
+    width: 40%;
+    margin-left: 10%;
+}#TxtPrimari p {
+    margin-top: 100px;
+    font-size: 14px;
+    color: #191E49;
+    font-family: monospace;
+}#TxtPrimari h2 {
+    margin-top: 20px;
+    font-size: 50px;
+    color: #191E49;
+    font-family: sans-serif;
+}#TxtPrimari #p2 {
+    font-size: 22px;
+    color: #191E49;
+    font-family: sans-serif;
+    margin-bottom: 50px;
+}#TxtPrimari #p3 {
+    background-color: black;
+    border-radius: 30px;
+    width: 250px;
+    height: 50px;
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
+}#TxtPrimari #p3:hover{
+    opacity: 50%;
+}
+#ImgPrimari{
+    width: 40%;
+}#ImgPrimari img {
+    margin-top: 90px;
+    width: 120%;
+}
+@media(max-width: 800px){
+    #Primari {
+        display: flex;
+        flex-direction: column-reverse;
+        height: auto;
+    }
+    #Primari #TxtPrimari {
+        width: 80%;
+        margin-left: 10%;
+    }#Primari #ImgPrimari {
+        margin-top: -50px;
+        width: 80%;
+        margin-left: 10%;
+    }#TxtPrimari p {
+        margin-top: 50px;
+    }
+}
+#Faixas {
+    background-color: transparent;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+/* Estilos básicos do container */
+.container {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    overflow: hidden; /* Oculta as faixas quando saem da área visível */
+    background-color: #f0f0f0;
+  }
+  
+  /* Estilos básicos das faixas */
+  .stripe {
+    position: absolute;
+    width: 100%;
+    height: 50px;
+    background-color: #353332da; 
+    top: 5%; /* Ajusta a posição vertical da primeira faixa */
+    left: -100%; /* Inicialmente fora da tela, à esquerda */
+    animation: moveStripe 10s linear infinite;
+  }
+  .stripe2 {
+    top: 65%; /* Ajusta a posição vertical da segunda faixa */
+    background-color: #d1cccc; /* Cor diferente para a segunda faixa */
+    animation-delay: 2.5s; /* Atraso para a segunda faixa começar depois da primeira */
+  }
+  /* Animação para mover as faixas da esquerda para a direita */
+  @keyframes moveStripe {
+    0% {
+      left: -100%; /* Fora da tela à esquerda */
+    }
+    100% {
+      left: 100%; /* Fora da tela à direita */
+    }
+  }
+  #Slide {
+    width: 100%;
+    margin-top: 50px;
+    background-color: #353332da;
+    border-radius: 50px 50px 50px 50px;
+}
+#Slide p{
+    text-align: center;
+    font-size: 18px;
+    font-family: monospace;
+    color: #B7BCE6;
+}
+#Slide h2 {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 52px;
+    font-family: sans-serif;
+    color: #FCFAFA;
+}
+#Slide #Sp2 {
+    margin-top: 20px;
+    text-align: center;
+    color: #FCFAFA;
+}
+.slideshow {
+    margin-top: 30px;
+    width: 100%;
+    max-width: 600px; /* Ajuste para o tamanho desejado */
+    height: 400px; /* Ajuste para o tamanho desejado */
+    overflow: hidden;
+  }
+  
+  .slide {
+    position: absolute;
+    margin-left: 5%;
+    width: 90%;
+    height: 80%;
+    opacity: 0;
+    transition: opacity 2s ease-in-out;
+  }
+  
+  .active {
+    opacity: 1;
+  }
+  

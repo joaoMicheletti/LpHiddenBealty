@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <link rel="stylesheet" href='./style.css'/>
+    <title>HB | HiddenBeauty</title>
+    
+</head>
+<body>
+    <header id="Header">
+        <div id="ContentHeader">
+            <a href="/index.html"><img id="ImgHeader" src="./assets/Logo.jpeg" alt="logo odf sistem"/></a>
+            <nav>
+                <a>Diferencial</a>
+                <a>Recursos</a>
+                <a>Preços</a>
+                <a id="TesteGratuito">Teste Gratuito</a>
+            </nav>
+        </div>
+    </header>
+    <section id="Primari">
+        <div id="TxtPrimari">
+            <p>SOFTWARE COM MAIOR AVALIAÇÃO PARA SALÕES</p>
+            <h2>Onde os negócios ficam mais bonitos</h2>
+            <p id="p2">Crie uma experiência perfeita para o cliente<br/> e automatize as
+                operações diárias com o software de reserva e gerenciamento 
+                que os salões adoram.
+            </p>
+            <button id="p3">Experimente agora</button>
+        </div>
+        <div id="ImgPrimari">
+            <img src="./assets/homepropaganda.png" alt="img"/>
+        </div>
+    </section>
+    <div id="Faixas">
+        <div class="container">
+            <div class="stripe stripe1"></div>
+            <div class="stripe stripe2"></div>
+          </div>
+    </div>
+    <section id="Slide">
+        <div id="ContendSlide">
+            <br/>
+            <br/>
+            <br/><br/><br/>
+            <p>CONSTRUÍDO PARA SALÕES.
+            </p>
+            <h2>Tudo o que você precisa para impulsionar seu negócio</h2>
+            <p id="Sp2">Deixe que o Hidden Beauty faça o trabalho pesado, desde<br/>
+                 o agendamento simplificado de consultas e processamento de 
+                 <br/>pagamentos até a comunicação com o cliente, gerenciamento de <br/>
+                 equipe e vendas no varejo.</p>
+                 <br/>
+                 <br/>
+                 <br/>
+        </div>
+    </section>
+    <div class="slideshow">
+        <img src="assets/homepropaganda.png" class="slide" />
+        <img src="assets/02.png" class="slide" />
+        <img src="assets/03.png" class="slide" />
+        <img src="assets/04.png" class="slide" />
+        <img src="assets/05.png" class="slide" />
+        <img src="assets/06.png" class="slide" />
+        <img src="assets/07.png" class="slide" />
+    </div>
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+
+        function showSlide(index) {
+        slides.forEach((slide, i) => {
+            slide.classList.remove('active');
+            if (i === index) {
+            slide.classList.add('active');
+            }
+        });
+        }
+
+        function nextSlide() {
+        currentSlide = (currentSlide + 1) % slides.length;
+        showSlide(currentSlide);
+        }
+
+        setInterval(nextSlide, 3000); // Muda a cada 2 segundos
+
+        // Inicializar com o primeiro slide ativo
+        showSlide(currentSlide);
+
+    </script>
+</body>
+
+</html>
