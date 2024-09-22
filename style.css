@@ -8,7 +8,11 @@ body{
     background-color:  #eeeeee;
 }
 header{
-    position: relative;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
     background-color: rgba(0, 0, 0, 0.932);
     height: 80px;
 }
@@ -124,7 +128,7 @@ nav a:hover{
     }#Primari #ImgPrimari {
         margin-top: -50px;
         width: 80%;
-        margin-left: 10%;
+        margin-left: 20px;
     }#TxtPrimari p {
         margin-top: 50px;
     }
@@ -208,8 +212,254 @@ nav a:hover{
     opacity: 0;
     transition: opacity 2s ease-in-out;
   }
+  @media(max-width: 800px){
+    .slide {
+        height: 60%;
+      }
+  }
   
   .active {
     opacity: 1;
   }
-  
+
+#TimeMoney {
+    width: 100%;
+    margin-top: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.ElementTimeMoney{
+    background-color: #f8f4f3;
+    width: 30%;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 5px 3px 30px #191E49;
+}
+.ElementTimeMoney img {
+    margin-top: 20px;
+    width: 20%;
+    margin-bottom: 50px;
+}
+.TMp1{
+    font-size: 28px;
+    font-family: sans-serif;
+    color: #191E49;
+    font-weight: 600;
+}
+.TMp2{
+    margin-top: 30px;
+    font-size: 20px;
+    font-family: sans-serif;
+    color: #191E49;
+    margin-bottom: 20px;  
+}
+@media(max-width: 800px){
+    #TimeMoney {
+        width: 100%;
+        margin-top: 100px;
+        display: flex;
+        flex-direction: column;
+    }
+    .ElementTimeMoney{
+        width: 80%;
+        margin-left: 10%;
+        margin-bottom: 50px;
+    }
+
+}
+#XP {
+    margin-top: 100px;
+    width: 90%;
+    margin-left: 5%;
+    display: flex;
+    flex-direction: row;
+}
+#XPTXT {
+    width: 50%;
+}#XPTXT #XPp1 {
+    font-size: 15px;
+    font-family: monospace;
+    margin-top: 20px;
+    color: #474F7B;
+    margin-bottom: 50px;
+}#XPTXT #XPp2 {
+    font-size: 50px;
+    font-weight: 600;
+    font-family: sans-serif;
+    color: #191E49;
+    margin-bottom: 50px;
+}#XPTXT #XPp3 {
+    font-size: 24px;
+    font-family: sans-serif;
+    color: #191E49;
+}
+#XPIMG img{ 
+    border-radius: 20px;
+}
+@media(max-width: 800px){
+    #XP {
+        flex-direction: column;
+    }#XPTXT {
+        width: 80%;
+        margin-left: 10%;
+    }#XPTXT #XPp2 {
+        font-size: 50px;
+    }#XPIMG {
+        margin-top: 30px;
+        width: 100%;
+    }#XPIMG img {
+        width: 100%;
+    }
+}
+#TheBest {
+    margin-top: 100px;
+    width: 90%;
+    margin-left: 5%;
+    display: flex;
+    flex-direction: row;
+}
+#TheBest #Phone img {
+    border-radius: 20px;
+}
+#TBTXT{
+    margin-left: 10%;
+}#TBTXT #TBP1{
+    margin-top: 10px;
+    font-size: 15px;
+    font-family: monospace;
+    color: #474F7B;
+}#TBTXT #TBP2 {
+    margin-top:  30px;
+    margin-bottom: 30px;
+    font-size: 50px;
+    font-weight: 600;
+    font-family: sans-serif;
+    color: #191E49;
+}#TBTXT #TBP3 {
+    margin-top:  30px;
+    margin-bottom: 30px;
+    font-size: 24px;
+    font-family: sans-serif;
+    color: #191E49;
+}
+@media(max-width:800px){
+    #TheBest {
+        display: flex;
+        flex-direction: column;
+    }#TheBest #Phone{
+        width: 100%;
+    } #TheBest #Phone img{
+        width: 100%;
+    } 
+}
+#Amor {
+    margin-top: 50px;
+    width: 90%;
+    margin-left: 5%;
+    display: flex;
+    flex-direction: row;
+}#ATXT {
+    width: 50%;
+}#ATXT #AP1 {
+    font-size: 15px;
+    font-family: monospace;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    color: #474F7B;
+}#ATXT #AP2 {
+    font-size: 50px;
+    font-family: sans-serif;
+    font-weight: 600;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    color: #191E49;
+}#ATXT #AP3 {
+    font-size: 24px;
+    font-family: sans-serif;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    color: #191E49;
+}#ATXT #BtnAmor {
+    width: 250px;
+    background-color: black;
+    font-size: 20px;
+    color: white;
+    height: 40px;
+    border-radius: 20px;
+}
+#AImg {
+    width: 50%;
+    text-align: center;
+}#AImg img {
+    margin-top: 30px;
+    width: 50%;
+    border-radius: 20px;
+}
+@media(max-width: 800px) {
+    #Amor {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 50px;
+    }#ATXT {
+        margin-left: 5%;
+        width: 90%;
+    }#AImg {
+        display: none;
+    }
+}
+#Depoimento {
+    margin-top: 100px;
+    width: 90%;
+    margin-left: 5%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+} #Depoimento div{
+    width: 30%;
+} #Depoimento div img {
+    margin-top: 10px;
+    margin-bottom: 20px;
+}#Depoimento div .DepoimentoP {
+    font-size: 20px;
+    font-family: sans-serif;
+    color: #191E49;
+    line-height: 30px;
+}
+@media(max-width: 800px){
+    #Depoimento {
+        display: flex;
+        flex-direction: column;
+    } #Depoimento div{
+        width: 80%;
+        margin-left: 10%;
+        margin-bottom: 30px;
+    }
+}
+#Teste {
+    border-radius: 20px;
+    text-align: center;
+    margin-top: 50px;
+    width: 80%;
+    margin-left: 10%;
+    background-color: white;
+    box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.596);
+    margin-bottom: 100px;
+}#TestContent h1 {
+    font-size: 50px;
+    font-family: sans-serif;
+    color: #191E49;
+}#TestContent p {
+    font-size: 24px;
+    color: #191E49;
+}#TestContent #buttons button{
+    width: 250px;
+    height: 40px;
+    border-radius: 20px;
+    color: white;
+    background-color: black;
+    font-weight: 600;
+}#TestContent #buttons button:hover {
+    opacity: 70%;
+}
+
