@@ -14,9 +14,9 @@
             <a href="/index.html"><img id="ImgHeader" src="./assets/Logo.jpeg" alt="logo odf sistem"/></a>
             <nav>
                 <a>Diferencial</a>
-                <a>Recursos</a>
+                <a href="#TimeMoney">Recursos</a>
                 <a>Preços</a>
-                <a id="TesteGratuito">Teste Gratuito</a>
+                <a onclick="Link()" id="TesteGratuito">Teste Gratuito</a>
             </nav>
         </div>
     </header>
@@ -28,7 +28,7 @@
                 operações diárias com o software de reserva e gerenciamento 
                 que os salões adoram.
             </p>
-            <button id="p3">Experimente agora</button>
+            <button onclick="Link()" id="p3">Experimente agora</button>
         </div>
         <div id="ImgPrimari">
             <img src="./assets/homepropaganda.png" alt="img"/>
@@ -196,8 +196,8 @@
             <br/>
             <p>Assista a um tour em vídeo, agende uma demonstração ou inicie um teste gratuito.</p>
             <br/><br/><div id="buttons">
-                <button>Agendar uma demonstrção</button><br/><br/>  
-                <button>Experimente agora</button>
+                <button onclick="Link()" >Agendar uma demonstrção</button><br/><br/>  
+                <button onclick="Link()" >Experimente agora</button>
                 <br/>
                 <br/>
             </div>
@@ -235,6 +235,10 @@
 
         // Inicializar com o primeiro slide ativo
         showSlide(currentSlide);
+
+        function Link(){
+            window.location.href = 'https://wa.me/5511932223533/?text=Olá,%20vim%20através%20do%20site%20Hidden%20Beauty,%20fiquei%20interessado%20e%20gostaria%20de%20mais%20informações.';
+        }
 
     </script>
 </body>
